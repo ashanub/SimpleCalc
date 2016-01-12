@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	double x, y , ans; //Variables to calculate & answer
+	int select;
+	string repeat = "n";
+
+	cout << "*******************************************************************\n"
+			"				CALCULATOR											\n"
+			"*******************************************************************\n";
+
+	do
+	{
+		cout << "What function would you like to use?\n"
+				"		(1) - for Addition\n"
+				"		(2) - for Subtraction\n"
+				"		(3) - for Multiplication\n"
+				"		(4) - for Division\n";
+		cin >> select;
+
+		cout << "Please enter the first number: ";
+		cin >> x;
+
+		//Addition
+		if (select == 1)
+		{
+			cout << "Please enter the number you would like to add to " << x << ": ";
+			cin >> y;
+			ans = x + y;
+
+
+		}
+
+		//Subtraction
+		else if (select == 2)
+		{
+			cout << "Please enter the number you would like to subtract from " << x << ": ";
+			cin >> y;
+			ans = x - y;
+
+		}
+
+		//Multiplication
+		else if (select == 3)
+		{
+			cout << "Please enter the number you would like to multiply " << x << "by: ";
+			cin >> y;
+			ans = x * y;
+
+		}
+
+		//Division
+		else if (select == 4)
+		{
+			cout << "Please enter the number you would like to divide " << x << "by: " ;
+			cin >> y;
+			ans = x / y;
+		}
+
+		cout << "Answer = " << ans << endl;
+		cout << "Do you want to calculate again? (y/n)" << endl;
+		cin >> repeat;
+		
+
+				
+	} while (repeat == "y");
+	
+
+}
